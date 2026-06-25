@@ -1,0 +1,122 @@
+Monyk Ribeiro <monykribeiro2009@gmail.com>
+	
+07:54 (há 3 minutos)
+	
+	
+para mim
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gerador de Senhas Seguro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+<h1>🔒 Gerador de Senhas</h1>
+
+<input type="text" id="senha" class="senha" readonly>
+
+<div class="config">
+<label>Tamanho: <span id="valorTamanho">12</span></label>
+<input type="range" min="8" max="32" value="12" id="tamanho">
+</div>
+
+<label><input type="checkbox" id="maiusculas" checked> Letras Maiúsculas</label>
+<label><input type="checkbox" id="minusculas" checked> Letras Minúsculas</label>
+<label><input type="checkbox" id="numeros" checked> Números</label>
+<label><input type="checkbox" id="especiais" checked> Caracteres Especiais</label>
+
+<button onclick="gerarSenha()">Gerar Senha</button>
+<button onclick="copiarSenha()">Copiar Senha</button>
+
+<div class="forca" id="forca">Força: Média</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, sans-serif;
+}
+
+body {
+background: #121212;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+}
+
+.container {
+background: #1e1e1e;
+padding: 30px;
+border-radius: 15px;
+width: 400px;
+box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+}
+
+h1 {
+text-align: center;
+margin-bottom: 20px;
+color: #00ff88;
+}
+
+.senha {
+width: 100%;
+padding: 12px;
+font-size: 18px;
+border: none;
+border-radius: 8px;
+margin-bottom: 15px;
+}
+
+.config {
+margin: 10px 0;
+}
+
+label {
+display: block;
+margin: 8px 0;
+}
+
+input[type="range"] {
+width: 100%;
+}
+
+button {
+width: 100%;
+padding: 12px;
+margin-top: 10px;
+border: none;
+border-radius: 8px;
+background: #00c853;
+color: white;
+font-size: 16px;
+cursor: pointer;
+}
+
+button:hover {
+background: #00a844;
+}
+
+.forca {
+margin-top: 15px;
+text-align: center;
+font-weight: bold;
+}
